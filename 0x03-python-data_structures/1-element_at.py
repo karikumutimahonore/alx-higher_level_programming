@@ -12,6 +12,7 @@ def element_at(my_list: list, idx: int) -> int:
     Returns:
         int: the value of the element if found, else None
     """
+    # handle invalid index ranges - negatives not accepted as well
     if 0 > idx >= len(my_list):
         return None
 
@@ -19,4 +20,4 @@ def element_at(my_list: list, idx: int) -> int:
         if i == idx:
             return data
 
-    return None
+    return None  # element not found
